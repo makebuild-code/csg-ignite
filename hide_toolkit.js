@@ -3,16 +3,16 @@ document.addEventListener("DOMContentLoaded", function() {
     var el = document.getElementById("show-for-super-admin");
     if (!el) return;
 
-    // Hide by default for safety
+    // Hide by default
     el.style.display = "none";
 
-    // If there is no member or no custom fields, keep it hidden
+    // If no member or no custom fields, keep hidden
     if (!member || !member.customFields) return;
 
-    // Use your exact custom field ID
-    var role = member.customFields["igniterole"];
+    // Use the igniterole custom field (confirmed from your console log)
+    var role = member.customFields.igniterole;
 
-    // Only show if value equals "super_admin"
+    // Only show for super_admin
     if (role === "super_admin") {
       el.style.display = "block";
     }
