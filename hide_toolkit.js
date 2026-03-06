@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   window.$memberstackDom.getCurrentMember().then(({ data: member }) => {
-    var el = document.getElementById("show-for-super-admin");
+    var el = document.getElementById("show-for-reward-manager");
     if (!el) return;
 
     // Hide by default
